@@ -13,13 +13,13 @@ def get_neighbors(training_set, test_instance, k):
     for x in range(len(training_set)):
         dist = Euclid_dist(test_instance, training_set[x], length)
         distances.append((training_set[x], dist)) # 构成拥有两个成员的元组([],dist)
-        print(distances)
-        print('...')
+        # print(distances)
+        # print('...')
     distances.sort(key = operator.itemgetter(1))  # 以第1列为关键字排序
     neighbors = []
     for x in range(k):
         neighbors.append(distances[x][0])
-        return neighbors
+    return neighbors
 
 training_set = [[3, 2, 6, 'a'], [1, 2, 4, 'b'], [2, 2, 2, 'b'], [1, 5, 4, 'a']]
 test_instance = [4, 6, 7]
