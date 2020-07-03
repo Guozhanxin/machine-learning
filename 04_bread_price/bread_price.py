@@ -7,7 +7,7 @@
 # 数据
 bread_price = [[0.5,5],[0.6,5.5],[0.8,6],[1.1,6.8],[1.4,7]]
 
-# 更新一次 w0, w1 的值
+# 更新一次 w0, w1 的值 BGD(Batch Gradient Descent,批量梯度下降法)
 def BGD_step_gradient(w0_current, w1_current, points, learninggRate):
     w0_gradient = 0
     w1_gradient = 0
